@@ -1,0 +1,32 @@
+11-07-20-15-27
+START-------------------------
+
+> express_servertemplate@1.0.0 test /Users/czara/coder-academy/t3-mern-app/bespoke-Server
+> mocha
+
+
+
+Connected to database!
+  getAllProducts when there is one product
+    1) "before each" hook for "should get a product if a product exists"
+    2) "after each" hook for "should get a product if a product exists"
+
+
+  0 passing (71ms)
+  2 failing
+
+  1) "before each" hook for "should get a product if a product exists":
+     ReferenceError: setupData is not defined
+      at Context.<anonymous> (test/products.test.js:19:17)
+      at processImmediate (internal/timers.js:456:21)
+
+  2) "after each" hook for "should get a product if a product exists":
+     TypeError: Cannot read property 'exec' of undefined
+      at Context.<anonymous> (test/products.test.js:26:17)
+      at processImmediate (internal/timers.js:456:21)
+
+
+
+END-------------------------
+
+

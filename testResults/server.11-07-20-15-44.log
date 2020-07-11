@@ -1,0 +1,82 @@
+11-07-20-15-44
+START-------------------------
+
+> express_servertemplate@1.0.0 test /Users/czara/coder-academy/t3-mern-app/bespoke-Server
+> mocha
+
+
+
+Connected to database!
+  getAllProducts when there is one product
+    1) should get a product if a product exists
+    2) "after each" hook for "should get a product if a product exists"
+
+
+  0 passing (134ms)
+  2 failing
+
+  1) getAllProducts when there is one product
+       should get a product if a product exists:
+     Uncaught Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 1
+Received: 2
+      at /Users/czara/coder-academy/t3-mern-app/bespoke-Server/test/products.test.js:38:42
+      at /Users/czara/coder-academy/t3-mern-app/bespoke-Server/node_modules/mongoose/lib/model.js:4882:16
+      at /Users/czara/coder-academy/t3-mern-app/bespoke-Server/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+      at /Users/czara/coder-academy/t3-mern-app/bespoke-Server/node_modules/mongoose/lib/model.js:4905:21
+      at /Users/czara/coder-academy/t3-mern-app/bespoke-Server/node_modules/mongoose/lib/query.js:4390:11
+      at /Users/czara/coder-academy/t3-mern-app/bespoke-Server/node_modules/kareem/index.js:135:16
+      at processTicksAndRejections (internal/process/task_queues.js:79:11)
+
+  2) "after each" hook for "should get a product if a product exists":
+     TypeError: Cannot read property 'exec' of undefined
+      at Context.<anonymous> (test/products.test.js:27:17)
+      at processImmediate (internal/timers.js:456:21)
+
+
+
+END-------------------------
+
+
+11-07-20-15-44
+START-------------------------
+
+> express_servertemplate@1.0.0 test /Users/czara/coder-academy/t3-mern-app/bespoke-Server
+> mocha
+
+
+
+Connected to database!
+  getAllProducts when there is one product
+    1) should get a product if a product exists
+    2) "after each" hook for "should get a product if a product exists"
+
+
+  0 passing (91ms)
+  2 failing
+
+  1) getAllProducts when there is one product
+       should get a product if a product exists:
+     Uncaught Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 1
+Received: 3
+      at /Users/czara/coder-academy/t3-mern-app/bespoke-Server/test/products.test.js:38:42
+      at /Users/czara/coder-academy/t3-mern-app/bespoke-Server/node_modules/mongoose/lib/model.js:4882:16
+      at /Users/czara/coder-academy/t3-mern-app/bespoke-Server/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+      at /Users/czara/coder-academy/t3-mern-app/bespoke-Server/node_modules/mongoose/lib/model.js:4905:21
+      at /Users/czara/coder-academy/t3-mern-app/bespoke-Server/node_modules/mongoose/lib/query.js:4390:11
+      at /Users/czara/coder-academy/t3-mern-app/bespoke-Server/node_modules/kareem/index.js:135:16
+      at processTicksAndRejections (internal/process/task_queues.js:79:11)
+
+  2) "after each" hook for "should get a product if a product exists":
+     TypeError: Cannot read property 'exec' of undefined
+      at Context.<anonymous> (test/products.test.js:27:17)
+      at processImmediate (internal/timers.js:456:21)
+
+
+
+END-------------------------
+
+
