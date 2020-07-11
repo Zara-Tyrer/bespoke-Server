@@ -19,7 +19,7 @@ if(process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
 }
     
-const dbConn = process.env.MONGODB_URI // 'mongodb://localhost/bespoke_nails'  
+const dbConn = process.env.MONGODB_URI || 'mongodb://localhost/bespoke_nails'  
 
 mongoose.connect(
     dbConn, 

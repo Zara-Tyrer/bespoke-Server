@@ -1,0 +1,27 @@
+11-07-20-15-41
+START-------------------------
+
+> express_servertemplate@1.0.0 test /Users/czara/coder-academy/t3-mern-app/bespoke-Server
+> mocha
+
+
+
+Connected to database!
+  getAllProducts when there is one product
+    ✓ should get a product if a product exists
+    1) "after each" hook for "should get a product if a product exists"
+
+
+  1 passing (247ms)
+  1 failing
+
+  1) "after each" hook for "should get a product if a product exists":
+     TypeError: Cannot read property 'exec' of undefined
+      at Context.<anonymous> (test/products.test.js:27:17)
+      at processImmediate (internal/timers.js:456:21)
+
+
+
+END-------------------------
+
+
