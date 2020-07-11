@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const productRouter = require("./routes/products_routes")
 
 // Sets port if deploying to external provider 
 // or port assigned already
@@ -36,7 +37,7 @@ mongoose.connect(
     }
   )
   
-
+app.use("/products", productRouter) 
 
 // Define a simple route for GET
 app.get("/",(req,res) => {
