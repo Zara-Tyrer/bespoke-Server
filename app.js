@@ -16,9 +16,26 @@ app.use(bodyParser.json());
 
 if(process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
-    }
+}
     
-const dbConn = process.env.MONGODB_URI || 'mongodb://localhost/bespoke_nails'  
+const dbConn = process.env.MONGODB_URI // 'mongodb://localhost/bespoke_nails'  
+
+mongoose.connect(
+    dbConn, 
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useFindAndModify: false
+    },
+    err => {
+      if (err) {
+        console.log("Error connecting to database", err)
+      } else {
+        console.log("Connected to database!")
+      }
+    }
+  )
+  
 
 
 // Define a simple route for GET
