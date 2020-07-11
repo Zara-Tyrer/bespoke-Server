@@ -6,7 +6,7 @@ const productRouter = require("./routes/products_routes")
 
 // Sets port if deploying to external provider 
 // or port assigned already
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 // Equivalant of create server in http library
 const app = express();
@@ -38,6 +38,7 @@ mongoose.connect(
   )
   
 app.use("/products", productRouter) 
+
 
 // Define a simple route for GET
 app.get("/",(req,res) => {
