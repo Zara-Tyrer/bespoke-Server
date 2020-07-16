@@ -13,5 +13,15 @@ const getProductById = function(req) {
   return Product.findById(req.params.id)
 }
 
+const deleteProduct = function(id) {
+  return Product.findByIdAndRemove(id)
+}
 
-module.exports = {getAllProducts, addProduct, getProductById}
+const updateProduct = function(req) {
+  return Product.findByIdAndUpdate(req.params.id, req.body, {
+    new: true
+  })
+}
+
+
+module.exports = {getAllProducts, addProduct, getProductById, deleteProduct, updateProduct}

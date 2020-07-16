@@ -1,0 +1,28 @@
+16-07-20-17-14
+START-------------------------
+
+> express_servertemplate@1.0.0 test /Users/jadetyrer/Desktop/coder-academy/term-3/assignments/bespoke-nails/bespoke-Server
+> mocha
+
+
+
+Connected to database!
+  getAllProducts when there is one product
+    ✓ should get a product if a product exists
+    ✓ should have nail_shape be squoval
+
+  Add a product
+    ✓ should add a product
+
+  Get product by id
+    ✓ It should get a product with nail style of planets
+
+  Delete product
+    ✓ Should delete the specified product
+
+
+  5 passing (207ms)
+
+END-------------------------
+
+

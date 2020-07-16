@@ -1,0 +1,42 @@
+16-07-20-17-12
+START-------------------------
+
+> express_servertemplate@1.0.0 test /Users/jadetyrer/Desktop/coder-academy/term-3/assignments/bespoke-nails/bespoke-Server
+> mocha
+
+
+
+Connected to database!
+  getAllProducts when there is one product
+    ✓ should get a product if a product exists
+    ✓ should have nail_shape be squoval
+
+  Add a product
+    ✓ should add a product
+
+  Get product by id
+    ✓ It should get a product with nail style of planets
+
+  Delete product
+    1) Should delete the specified product
+
+
+  4 passing (191ms)
+  1 failing
+
+  1) Delete product
+       Should delete the specified product:
+     Uncaught ReferenceError: product is not defined
+      at /Users/jadetyrer/Desktop/coder-academy/term-3/assignments/bespoke-nails/bespoke-Server/test/products.test.js:87:14
+      at /Users/jadetyrer/Desktop/coder-academy/term-3/assignments/bespoke-nails/bespoke-Server/node_modules/mongoose/lib/model.js:4882:16
+      at /Users/jadetyrer/Desktop/coder-academy/term-3/assignments/bespoke-nails/bespoke-Server/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+      at /Users/jadetyrer/Desktop/coder-academy/term-3/assignments/bespoke-nails/bespoke-Server/node_modules/mongoose/lib/model.js:4905:21
+      at /Users/jadetyrer/Desktop/coder-academy/term-3/assignments/bespoke-nails/bespoke-Server/node_modules/mongoose/lib/query.js:4390:11
+      at /Users/jadetyrer/Desktop/coder-academy/term-3/assignments/bespoke-nails/bespoke-Server/node_modules/kareem/index.js:135:16
+      at processTicksAndRejections (internal/process/task_queues.js:79:11)
+
+
+
+END-------------------------
+
+
