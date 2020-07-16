@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 // Equivalant of create server in http library
 const app = express();
 
-// Call the middleware we want to use
+
 const whitelist = ['http://localhost:3000','https://reverent-rosalind-d6a50f.netlify.app/']
 app.use(cors({
     credentials: true,
@@ -22,6 +22,8 @@ app.use(cors({
         callback(null,whitelistIndex > -1)
     }
 }));
+
+// Call the middleware we want to use
 app.use(bodyParser.json());
 
 if(process.env.NODE_ENV !== 'production') {
