@@ -9,7 +9,7 @@ before((done) => {
   // Connect to the database (same as we do in app.js)
   connectToDb(done);
 });
-  
+
 after((done) => {
   disconnectFromDb(done);
 })
