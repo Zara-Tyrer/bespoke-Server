@@ -9,5 +9,9 @@ const addProduct = function(req) {
   return new Product(req.body)
 }
 
+const getProductById = function(req) {
+  return Product.findById(req.params.id)
+}
 
-module.exports = {getAllProducts, addProduct}
+
+module.exports = {getAllProducts, addProduct, getProductById}

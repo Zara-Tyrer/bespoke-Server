@@ -67,6 +67,20 @@ describe("Add a product", (done) => {
 }
 )
 
+describe("Get product by id", (done) => {
+  it("It should get a product with nail style of planets", function(done){
+    let req = {
+      params: {
+        id: productId
+      }
+    }
+    utilities.getProductById(req).exec((err, product) => {
+      expect(product.nail_style).toBe("planets")
+      done()
+    })
+  })
+})
+
 
 //helper functions
 function setUpData() {
