@@ -81,6 +81,37 @@ describe("Get product by id", (done) => {
   })
 })
 
+describe("Delete product", (done) => {
+  it("Should delete the specified product", function (done){
+    utilities.deleteProduct(productId).exec(() => {
+      Product.findById(productId).exec((err, product) => {
+        expect(product).toBe(null)
+        done()
+      })
+    })
+  })
+})
+
+describe('updateProduct', (done) => {
+  it('Should update a product', function (done) {
+      // set up a req object
+      const req = {
+          params: {
+              id: productId
+          },
+          body: {
+              nail_length: 25,
+              nail_shape: "round",
+              nail_style: "aztec",
+              cost: 25
+          }
+      };
+      utilities.updateProduct(req).exec((err, product) => {
+          expect(product.nail_style).toBe(req.body.nail_style);
+          done();
+      });
+  });
+});
 
 //helper functions
 function setUpData() {
