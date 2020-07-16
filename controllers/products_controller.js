@@ -1,4 +1,4 @@
-const {addProduct, getAllProducts} = require("../utils/product_utilities")
+const {addProduct, getAllProducts, getProductById} = require("../utils/product_utilities")
 
 
 const getProducts = function(req, res) {
@@ -27,4 +27,14 @@ const makeProduct = function(req, res) {
   })
 }
 
-module.exports = {getProducts, makeProduct}
+const getProduct = function(req, res) {
+  getProductById(req).exec((err, product) => {
+    if(err) {
+      res.status(404)
+      res.send("Product not found")
+    }
+    res.send(product)
+  })
+}
+
+module.exports = {getProducts, makeProduct, getProduct}
