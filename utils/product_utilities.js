@@ -15,6 +15,7 @@ const getProductById = function(req) {
 
 const deleteProduct = function(id) {
   return Product.findByIdAndRemove(id)
+  // return Product.find
 }
 
 const updateProduct = function(req) {

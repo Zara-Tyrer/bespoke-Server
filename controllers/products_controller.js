@@ -29,12 +29,13 @@ const makeProduct = function(req, res) {
 
 const getProduct = function(req, res) {
   getProductById(req).exec((err, product) => {
-    if(err) {
-      res.status(404)
-      res.send("Product not found")
+    if (product) {
+      return res.send(product)
     }
-    res.send(product)
-  })
+    res.status(404)
+    res.send("Product not found") 
+    }
+  )
 }
 
 const removeProduct = function(req, res) {
@@ -72,8 +73,9 @@ const changeProduct = function(req, res) {
   }
 }
 
-//helper function for admin/user authentication
-const userAuthenticated = function(req, res, next) {
+// helper function for admin/user authentication
+const userAuthenticated = function (req, res, next) {
+  console.log("This is the user:", req.user)
   if (req.isAuthenticated()){
     next()
   } else {
