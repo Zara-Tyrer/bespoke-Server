@@ -3,6 +3,11 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const productRouter = require("./routes/products_routes")
+const authRouter = require("./routes/auth_routes")
+const passport = require('passport')
+const session = require('express-session');
+const MongoStore = require("connect-mongo")(session)
+
 
 // Sets port if deploying to external provider 
 // or port assigned already
@@ -47,9 +52,29 @@ mongoose.connect(
       }
     }
   )
+
+//session must be before passport
+app.use(session({
+  // resave and saveUninitialized set to false for deprecation warnings
+  secret: "Donutsfordays",
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+      maxAge: 1800000
+  },
+  store: new MongoStore({
+      mongooseConnection: mongoose.connection
+  })
+}));
+
+//passport authentication
+require("./config/passport")
+app.use(passport.initialize())
+app.use(passport.session())
+
   
 app.use("/products", productRouter) 
-
+app.use("/admin", authRouter)
 
 // Define a simple route for GET
 app.get("/",(req,res) => {

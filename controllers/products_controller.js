@@ -72,5 +72,16 @@ const changeProduct = function(req, res) {
   }
 }
 
+//helper function for admin/user authentication
+const userAuthenticated = function(req, res, next) {
+  if (req.isAuthenticated()){
+    next()
+  } else {
+    res.sendStatus(403)
+  }
+}
 
-module.exports = {getProducts, makeProduct, getProduct, removeProduct, changeProduct}
+
+
+
+module.exports = {getProducts, makeProduct, getProduct, removeProduct, changeProduct, userAuthenticated}
