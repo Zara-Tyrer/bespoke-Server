@@ -3,9 +3,11 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const productRouter = require("./routes/products_routes")
+const authRouter = require("./routes/auth_routes")
 const passport = require('passport')
 const session = require('express-session');
 const MongoStore = require("connect-mongo")(session)
+
 
 // Sets port if deploying to external provider 
 // or port assigned already
@@ -72,6 +74,7 @@ app.use(passport.session())
 
   
 app.use("/products", productRouter) 
+app.use("/admin", authRouter)
 
 // Define a simple route for GET
 app.get("/",(req,res) => {
