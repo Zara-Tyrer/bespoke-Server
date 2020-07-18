@@ -8,8 +8,7 @@ const Order = new Schema ({
       required: true
     },
     address: {
-      type: String,
-      required: true
+      type: String
     },
     email: {
       type: String,
@@ -17,7 +16,8 @@ const Order = new Schema ({
     },
     phone_number: {
       type: Number,
-      required: true
+      required: true, 
+      min: [11, "please enter a valid UK mobile number"],
     },
     nail_length: {
       type: Number,
@@ -34,8 +34,11 @@ const Order = new Schema ({
     cost: {
       type: Number,
       required: true
+    },
+    completed: {
+      type: Boolean,
+      default: false
     }
-
 })
 
 

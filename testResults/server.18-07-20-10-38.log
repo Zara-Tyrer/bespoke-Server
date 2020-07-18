@@ -1,0 +1,32 @@
+18-07-20-10-38
+START-------------------------
+
+> express_servertemplate@1.0.0 test /Users/czara/coder-academy/t3-mern-app/bespoke-Server
+> mocha
+
+
+
+Connected to database!
+Connected to database!
+  create an order
+    ✓ should return a new order with Test User as name
+
+  getAllProducts when there is one product
+    ✓ should get a product if a product exists
+    ✓ should have nail_shape be squoval
+
+  Add a product
+    ✓ should add a product
+
+  Get product by id
+    ✓ It should get a product with nail style of planets
+
+  Delete product
+    ✓ Should delete the specified product
+
+  updateProduct
+    ✓ Should update a product
+
+
+  7 passing (365ms)
+

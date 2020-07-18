@@ -1,0 +1,88 @@
+18-07-20-11-26
+START-------------------------
+
+> express_servertemplate@1.0.0 test /Users/czara/coder-academy/t3-mern-app/bespoke-Server
+> mocha
+
+END-------------------------
+
+
+18-07-20-11-26
+START-------------------------
+
+> express_servertemplate@1.0.0 test /Users/czara/coder-academy/t3-mern-app/bespoke-Server
+> mocha
+
+
+
+Connected to database!
+Connected to database!
+  get all orders
+    1) should get order with correct email address
+
+  create an order
+    ✓ should return a new order with Test User as name
+
+  getAllProducts when there is one product
+    ✓ should get a product if a product exists
+    ✓ should have nail_shape be squoval
+
+  Add a product
+    ✓ should add a product
+
+  Get product by id
+    ✓ It should get a product with nail style of planets
+
+  Delete product
+    ✓ Should delete the specified product
+
+  updateProduct
+    ✓ Should update a product
+
+
+  7 passing (2s)
+  1 failing
+
+  1) get all orders
+       should get order with correct email address:
+     Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (/Users/czara/coder-academy/t3-mern-app/bespoke-Server/test/orders.test.js)
+      at listOnTimeout (internal/timers.js:549:17)
+      at processTimers (internal/timers.js:492:7)
+
+
+
+18-07-20-11-26
+START-------------------------
+
+> express_servertemplate@1.0.0 test /Users/czara/coder-academy/t3-mern-app/bespoke-Server
+> mocha
+
+
+
+Connected to database!
+Connected to database!
+  get all orders
+    ✓ should get order with correct email address
+
+  create an order
+    ✓ should return a new order with Test User as name
+
+  getAllProducts when there is one product
+    ✓ should get a product if a product exists
+    ✓ should have nail_shape be squoval
+
+  Add a product
+    ✓ should add a product
+
+  Get product by id
+    ✓ It should get a product with nail style of planets (76ms)
+
+  Delete product
+    ✓ Should delete the specified product
+
+  updateProduct
+    ✓ Should update a product
+
+
+  8 passing (685ms)
+

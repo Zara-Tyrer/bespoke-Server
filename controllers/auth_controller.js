@@ -34,8 +34,21 @@ function loginUser(req, res) {
     });
 }
 
+function activeUserSession(req,res) {
+    console.log("in activeUserSession sessionID", req.sessionID)
+    console.log("in activeUserSession user", req.user)
+    if(req.sessionID && req.user) {
+        res.status(200);
+        res.send(req.sessionID)
+    }
+    else {
+        res.sendStatus(403);
+    }    
+}
+
 module.exports = {
     register,
     login: loginUser,
-    logout
+    logout,
+    activeUserSession
 };
