@@ -23,8 +23,10 @@ const deleteOrder = function(id) {
   // return Product.find
 }
 
+//edit to mark order as completed for Admin
+const updateOrder = function(req) {
+  return Order.findByIdAndUpdate(req.params.id, req.body, {new:true})
+}
 
-//don't really need edit at this point?
 
-
-module.exports = {addOrder, getAllOrders, getOrderById, deleteOrder}
+module.exports = {addOrder, getAllOrders, getOrderById, deleteOrder, updateOrder}
