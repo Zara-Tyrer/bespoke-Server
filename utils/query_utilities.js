@@ -13,7 +13,7 @@ const getQueryById = function(req) {
   return Query.findById(req.params.id)
 }
 
-const removeQuery = function(id) {
+const deleteQuery = function(id) {
   return Query.findByIdAndRemove(id)
 }
 
@@ -22,4 +22,4 @@ const updateQuery = function(req) {
 }
 
 
-module.exports = {addQuery, getQueries, getQueryById, removeQuery, updateQuery}
+module.exports = {addQuery, getQueries, getQueryById, deleteQuery, updateQuery}

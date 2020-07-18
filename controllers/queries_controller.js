@@ -1,4 +1,4 @@
-const {addQuery, getQueries, getQueryById, removeQuery, updateQuery} = require("../utils/query_utilities")
+const {addQuery, getQueries, getQueryById, deleteQuery, updateQuery} = require("../utils/query_utilities")
 
 //make query
 const makeQuery = function(req, res) {
@@ -14,6 +14,7 @@ const makeQuery = function(req, res) {
   })
 }
 
+//get all queries - admin only 
 const getAllQueries = function(req, res) {
   getQueries(req).exec((err, queries) => {
     if (err) {
@@ -26,6 +27,51 @@ const getAllQueries = function(req, res) {
   })
 }
 
-const getAQuery = function 
+//get a query by id - admin
+const getAQuery = function(req, res) {
+  if (query) {
+    return res.send(query)
+    res.status(302)
+  }
+  res.status(404)
+  res.send("Query not found") 
+}
 
-module.exports = {makeQuery, getAllQueries }
+//remove (cancel by admin)
+const removeQuery = function(req, res) {
+  if(req.error) {
+    res.status(req.error.status)
+    res.send(req.error.message)
+  } else {
+    deleteQuery(req.params.id).exec(err => {
+      if(err) {
+        res.status(500)
+        res.json({
+          error: err.message
+        })
+      }
+      res.sendStatus(204)
+    })
+  }
+}
+
+const changeQuery = function(req, res) {
+  if(req.error) {
+    res.status(req.error.status)
+    res.send(req.error.message)
+  } else {
+    updateQuery(req).exec((err, query)=> {
+      if(err) {
+        res.status(500)
+        res.json({
+          error: err.message
+        })
+      }
+      res.status(200)
+      res.send(query)
+    })
+  }
+}
+
+
+module.exports = {makeQuery, getAllQueries, getAQuery, removeQuery, changeQuery }
