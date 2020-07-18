@@ -15,7 +15,7 @@ const Order = new Schema ({
       required: true
     },
     phone_number: {
-      type: Number,
+      type: String,
       required: true, 
       min: [11, "please enter a valid UK mobile number"],
     },
@@ -38,6 +38,10 @@ const Order = new Schema ({
     completed: {
       type: Boolean,
       default: false
+    },
+    date_created: {
+      type: Date,
+      default: Date.now()
     }
 })
 
