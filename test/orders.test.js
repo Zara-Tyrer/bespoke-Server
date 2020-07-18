@@ -27,6 +27,17 @@ afterEach((done) => {
   tearDownData().exec(() => done());
 });
 
+describe("get all orders", (done) => {
+  it("should get order with correct email address", async function() {
+    let req = {
+      query: {}
+    }
+    await utilities.getAllOrders(req).exec((err, orders) => {
+      expect(orders[0].email).toBe("test@bespokeTest.co.uk")
+    })
+  })
+})
+
 
 describe("create an order", (done) => {
   it("should return a new order with Test User as name", function(done) {
