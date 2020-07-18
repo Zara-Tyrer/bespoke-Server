@@ -28,7 +28,7 @@ const makeProduct = function(req, res) {
 }
 
 const getProduct = function(req, res) {
-  getOrderById(req).exec((err, product) => {
+  getProductById(req).exec((err, product) => {
     if (product) {
       return res.send(product)
     }

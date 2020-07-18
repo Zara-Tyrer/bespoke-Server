@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const {makeOrder, getOrders, getOrder} = require("../controllers/orders_controller")
+const {makeOrder, getOrders, getOrder, removeOrder} = require("../controllers/orders_controller")
 
 //require controller methods
 
@@ -12,6 +12,9 @@ router.get("/:id", getOrder)
 
 //make an order route
 router.post("/", makeOrder)
+
+//delete route
+router.delete("/:id", removeOrder)
 
 
 module.exports = router

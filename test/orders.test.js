@@ -46,7 +46,7 @@ describe("create an order", (done) => {
           name: "Test User-create",
           address: "123 Test St, London, E1 6AN",
           email: "testing@bnails.co.uk",
-          phone_number: 01234567891,
+          phone_number: "01234567891",
           nail_length: 20,
           nail_shape: "square",
           nail_style: "sunflower",
@@ -60,6 +60,30 @@ describe("create an order", (done) => {
   })
 })
 
+describe("Get order by id", (done) => {
+  it("It should get a order with the username 'Test User'", function(done){
+    let req = {
+      params: {
+        id: orderId
+      }
+    }
+    utilities.getOrderById(req).exec((err, order) => {
+      expect(order.name).toBe("Test User")
+      done()
+    })
+  })
+})
+
+describe("Delete order", (done) => {
+  it("Should delete the specified order", function (done){
+    utilities.deleteOrder(orderId).exec(() => {
+      Order.findById(orderId).exec((err, order) => {
+        expect(order).toBe(null)
+        done()
+      })
+    })
+  })
+})
 
 
 
@@ -75,7 +99,7 @@ function setUpData() {
   testOrder.name = "Test User"; 
   testOrder.address = "123 Made-up St, London, E1 6AN";
   testOrder.email = "test@bespokeTest.co.uk";
-  testOrder.phone_number = 07911123456
+  testOrder.phone_number = "07911123456"
   testOrder.nail_length = 20;
   testOrder.nail_shape = "round";
   testOrder.nail_style = "hologram";

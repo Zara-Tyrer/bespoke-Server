@@ -18,9 +18,13 @@ const addOrder = function(req) {
 
 
 // delete order
+const deleteOrder = function(id) {
+  return Order.findByIdAndRemove(id)
+  // return Product.find
+}
 
 
 //don't really need edit at this point?
 
 
-module.exports = {addOrder, getAllOrders, getOrderById}
+module.exports = {addOrder, getAllOrders, getOrderById, deleteOrder}
