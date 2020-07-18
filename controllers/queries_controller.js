@@ -29,12 +29,13 @@ const getAllQueries = function(req, res) {
 
 //get a query by id - admin
 const getAQuery = function(req, res) {
-  if (query) {
-    return res.send(query)
-    res.status(302)
-  }
-  res.status(404)
-  res.send("Query not found") 
+  getQueryById(req).exec((err, query) => {
+    if (query) {
+      return res.send(query)
+    }
+    res.status(404)
+    res.send("Query not found") 
+  })
 }
 
 //remove (cancel by admin)
