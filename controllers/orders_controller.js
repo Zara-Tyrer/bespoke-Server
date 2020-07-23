@@ -65,7 +65,7 @@ const changeOrder = function(req, res) {
     res.status(req.error.status)
     res.send(req.error.message)
   } else {
-    updatedOrder(req).exec((err, order)=> {
+    updateOrder(req).exec((err, order)=> {
       if(err) {
         res.status(500)
         res.json({
