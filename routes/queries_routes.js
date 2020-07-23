@@ -5,11 +5,12 @@ const {userAuthenticated} = require("../controllers/products_controller")
 
 // make query open to customer
 router.post("/", makeQuery)
+router.get("/:id", getAQuery)
 
 router.use(userAuthenticated)
 //admin only
 router.get("/", getAllQueries)
-router.get("/:id", getAQuery)
+//router.get("/:id", getAQuery)
 router.put("/:id", changeQuery)
 router.delete("/:id", removeQuery)
 
