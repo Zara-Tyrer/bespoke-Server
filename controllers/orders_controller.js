@@ -3,7 +3,11 @@ const {addOrder, getAllOrders, getOrderById, deleteOrder, updateOrder} = require
 
 //get all orders - for admin
 const getOrders = function(req, res) {
-  getAllOrders(req).exec((err, orders) => {
+  getAllOrders(req).
+  sort({
+    date_created: -1
+  }).
+  exec((err, orders) => {
     if (err) {
       res.status(500)
       res.json({

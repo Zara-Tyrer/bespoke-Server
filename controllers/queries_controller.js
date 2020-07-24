@@ -16,7 +16,10 @@ const makeQuery = function(req, res) {
 
 //get all queries - admin only 
 const getAllQueries = function(req, res) {
-  getQueries(req).exec((err, queries) => {
+  getQueries(req).sort({
+    date_created: -1
+  }).
+  exec((err, queries) => {
     if (err) {
       res.status(500)
       res.json({
