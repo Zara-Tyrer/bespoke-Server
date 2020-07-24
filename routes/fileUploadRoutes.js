@@ -18,8 +18,8 @@ router.post("/", upload.single("file"), function(req, res) {
     region: process.env.AWS_REGION
   });
 
-  console.log(process.env.AWS_ACCESS_KEY_ID);
-  console.log(process.env.AWS_SECRET_ACCESS_KEY);
+  // console.log(process.env.AWS_ACCESS_KEY_ID);
+  // console.log(process.env.AWS_SECRET_ACCESS_KEY);
 
   var params = {
     Bucket: process.env.AWS_BUCKET_NAME,
