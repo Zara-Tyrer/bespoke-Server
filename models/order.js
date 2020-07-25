@@ -42,6 +42,10 @@ const Order = new Schema ({
     date_created: {
       type: Date,
       default: Date.now()
+    },
+    image: {
+      description: { type: String },
+      fileLink: { type: String }
     }
 })
 
