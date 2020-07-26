@@ -38,19 +38,6 @@ router.post("/", upload.single("file"), function(req, res) {
     } else {
       res.send(awsURL + params.Key);
       console.log(awsURL + params.Key)
-
-      // const newFileUploaded = {
-      //   description: req.body.description,
-      //   fileLink: s3FileURL + file.originalname,
-      //   s3_key: params.Key
-      // };
-
-      // const image = new Image(newFileUploaded);
-      // image.save(function(error, newFile) {
-      //   if (error) {
-      //     throw error;
-      //   }
-      // });
     }
   });
 });
