@@ -45,7 +45,7 @@ const Order = new Schema ({
     },
     image: {
       description: { type: String },
-      fileLink: { type: String }
+      fileLink: { type: String, default: "https://bespoke-nails.s3-ap-southeast-2.amazonaws.com/noImage.png" }
     }
 })
 

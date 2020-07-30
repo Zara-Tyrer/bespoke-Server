@@ -20,7 +20,7 @@ const Product = new Schema ({
   },
   image: {
     description: { type: String },
-    fileLink: { type: String }
+    fileLink: { type: String, required: true }
   }
 })
 
