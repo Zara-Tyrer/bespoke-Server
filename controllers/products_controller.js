@@ -27,8 +27,6 @@ const makeProduct = function(req, res) {
   })
 }
 
-
-
 const getProduct = function(req, res) {
   getProductById(req).exec((err, product) => {
     if (product) {
