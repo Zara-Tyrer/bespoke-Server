@@ -50,9 +50,12 @@ describe("create an order", (done) => {
           nail_length: 20,
           nail_shape: "square",
           nail_style: "sunflower",
-          cost: 20
-        }
-      }
+          cost: 20,
+          image: {
+            description: "sunny",
+            fileLink: "https://bespoke-nails.s3-ap-southeast-2.amazonaws.com/noImage.png"
+          }
+        }};
       utilities.addOrder(req).save((err, order) => {
         expect(order.name).toBe(req.body.name)
         done()
@@ -86,13 +89,6 @@ describe("Delete order", (done) => {
 })
 
 
-
-
-
-
-
-
-
 //helper functions
 function setUpData() {
   let testOrder = {}
@@ -104,8 +100,13 @@ function setUpData() {
   testOrder.nail_shape = "round";
   testOrder.nail_style = "hologram";
   testOrder.cost = 20;
+  testOrder.image = {};
+  testOrder.image.fileLink = "https://bespoke-nails.s3-ap-southeast-2.amazonaws.com/noImage.png";
+  testOrder.image.description = "sunny";
+  console.log(testOrder)
   return Order.create(testOrder)
 }
+  
 
 function tearDownData() {
   return Order.deleteMany()

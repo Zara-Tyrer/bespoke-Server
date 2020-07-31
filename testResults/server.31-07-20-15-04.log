@@ -1,0 +1,27 @@
+31-07-20-15-04
+START-------------------------
+
+> express_servertemplate@1.0.0 test /Users/czara/coder-academy/t3-mern-app/bespoke-Server
+> mocha
+
+
+
+Connected to database!
+Connected to database!
+Connected to database!
+  get all orders
+    1) "before each" hook for "should get order with correct email address"
+
+
+  0 passing (179ms)
+  1 failing
+
+  1) "before each" hook for "should get order with correct email address":
+     ValidationError: Product validation failed: image.fileLink: Path `image.fileLink` is required.
+      at model.Document.invalidate (node_modules/mongoose/lib/document.js:2575:32)
+      at /Users/czara/coder-academy/t3-mern-app/bespoke-Server/node_modules/mongoose/lib/document.js:2395:17
+      at /Users/czara/coder-academy/t3-mern-app/bespoke-Server/node_modules/mongoose/lib/schematype.js:1213:9
+      at processTicksAndRejections (internal/process/task_queues.js:79:11)
+
+
+

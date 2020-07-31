@@ -1,7 +1,6 @@
 require("dotenv").config();
 const express = require("express");
 const router = express.Router();
-const Image = require("../models/image");
 const multer = require("multer");
 var AWS = require("aws-sdk");
 
