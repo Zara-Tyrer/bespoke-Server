@@ -2,6 +2,7 @@
 
 This server has 3 main resources with CRUD functionality: Products, Orders and Queries. The server uses Passport Authentication for an Admin user, with no authentication required to access the public routes (see Routes below for specific routes). It has been built with Express using a Node environment and connects to a Mongo Database located on Atlas (Cloud MongoDB). An AWS S3 Bucket has been integrated for image upload for product and order, with the file URL stored as part of the product and order objects (see Schema design). 
 
+
 ## Middleware
 
 - Cors

@@ -1,0 +1,26 @@
+31-07-20-15-17
+START-------------------------
+
+> express_servertemplate@1.0.0 test /Users/czara/coder-academy/t3-mern-app/bespoke-Server
+> mocha
+
+
+
+Connected to database!
+Connected to database!
+Connected to database!
+  get all orders
+    1) "before each" hook for "should get order with correct email address"
+
+
+  0 passing (80ms)
+  1 failing
+
+  1) "before each" hook for "should get order with correct email address":
+     TypeError: Cannot set property 'fileLink' of undefined
+      at setUpData (test/orders.test.js:103:28)
+      at Context.<anonymous> (test/orders.test.js:20:21)
+      at processImmediate (internal/timers.js:456:21)
+
+
+
