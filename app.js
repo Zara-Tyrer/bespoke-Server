@@ -6,6 +6,7 @@ const productRouter = require("./routes/products_routes")
 const authRouter = require("./routes/auth_routes")
 const orderRouter = require("./routes/orders_routes")
 const queryRouter = require("./routes/queries_routes")
+const emailRouter = require("./routes/email_routes")
 const passport = require('passport')
 const session = require('express-session');
 const MongoStore = require("connect-mongo")(session)
@@ -76,7 +77,7 @@ require("./config/passport")
 app.use(passport.initialize())
 app.use(passport.session())
 
-  
+app.use("/emails", emailRouter)
 app.use("/products", productRouter) 
 app.use("/admin", authRouter)
 app.use("/orders", orderRouter)
