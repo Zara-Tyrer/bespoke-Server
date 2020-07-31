@@ -56,7 +56,10 @@ describe("Add a product", (done) => {
         nail_length: 30,
         nail_shape: "stiletto",
         nail_style: "hologram",
-        cost: 20
+        cost: 20,
+        image: {
+          fileLink: "aws.test.com/image.png/123"
+        }
       }
     }
   utilities.addProduct(req).save((err, product) => {
@@ -103,9 +106,11 @@ describe('updateProduct', (done) => {
               nail_length: 25,
               nail_shape: "round",
               nail_style: "aztec",
-              cost: 25
-          }
-      };
+              cost: 25,
+              image: {
+                fileLink: "aws.test.com/image.png/123"
+              }
+          }};
       utilities.updateProduct(req).exec((err, product) => {
           expect(product.nail_style).toBe(req.body.nail_style);
           done();
@@ -119,7 +124,9 @@ function setUpData() {
   testProduct.nail_length = 20;
   testProduct.nail_shape = "squoval";
   testProduct.nail_style = "planets";
-  testProduct.cost = 20
+  testProduct.cost = 20;
+  testProduct.image = {}
+  testProduct.image.fileLink = "aws.test.com/image.png/123";
   return Product.create(testProduct)
 }
 

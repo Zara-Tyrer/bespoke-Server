@@ -1,0 +1,250 @@
+31-07-20-16-30
+START-------------------------
+
+> express_servertemplate@1.0.0 test /Users/czara/coder-academy/t3-mern-app/bespoke-Server
+> mocha
+
+
+
+Connected to database!
+Connected to database!
+Connected to database!
+  get all orders
+{
+  name: 'Test User',
+  address: '123 Made-up St, London, E1 6AN',
+  email: 'test@bespokeTest.co.uk',
+  phone_number: '07911123456',
+  nail_length: 20,
+  nail_shape: 'round',
+  nail_style: 'hologram',
+  cost: 20,
+  image: {
+    fileLink: 'https://bespoke-nails.s3-ap-southeast-2.amazonaws.com/noImage.png',
+    description: 'sunny'
+  }
+}
+    ✓ should get order with correct email address
+
+  create an order
+{
+  name: 'Test User',
+  address: '123 Made-up St, London, E1 6AN',
+  email: 'test@bespokeTest.co.uk',
+  phone_number: '07911123456',
+  nail_length: 20,
+  nail_shape: 'round',
+  nail_style: 'hologram',
+  cost: 20,
+  image: {
+    fileLink: 'https://bespoke-nails.s3-ap-southeast-2.amazonaws.com/noImage.png',
+    description: 'sunny'
+  }
+}
+    ✓ should return a new order with Test User as name
+
+  Get order by id
+{
+  name: 'Test User',
+  address: '123 Made-up St, London, E1 6AN',
+  email: 'test@bespokeTest.co.uk',
+  phone_number: '07911123456',
+  nail_length: 20,
+  nail_shape: 'round',
+  nail_style: 'hologram',
+  cost: 20,
+  image: {
+    fileLink: 'https://bespoke-nails.s3-ap-southeast-2.amazonaws.com/noImage.png',
+    description: 'sunny'
+  }
+}
+    ✓ It should get a order with the username 'Test User'
+
+  Delete order
+{
+  name: 'Test User',
+  address: '123 Made-up St, London, E1 6AN',
+  email: 'test@bespokeTest.co.uk',
+  phone_number: '07911123456',
+  nail_length: 20,
+  nail_shape: 'round',
+  nail_style: 'hologram',
+  cost: 20,
+  image: {
+    fileLink: 'https://bespoke-nails.s3-ap-southeast-2.amazonaws.com/noImage.png',
+    description: 'sunny'
+  }
+}
+    ✓ Should delete the specified order
+
+  getAllProducts when there is one product
+{
+  name: 'Test User',
+  address: '123 Made-up St, London, E1 6AN',
+  email: 'test@bespokeTest.co.uk',
+  phone_number: '07911123456',
+  nail_length: 20,
+  nail_shape: 'round',
+  nail_style: 'hologram',
+  cost: 20,
+  image: {
+    fileLink: 'https://bespoke-nails.s3-ap-southeast-2.amazonaws.com/noImage.png',
+    description: 'sunny'
+  }
+}
+    ✓ should get a product if a product exists
+{
+  name: 'Test User',
+  address: '123 Made-up St, London, E1 6AN',
+  email: 'test@bespokeTest.co.uk',
+  phone_number: '07911123456',
+  nail_length: 20,
+  nail_shape: 'round',
+  nail_style: 'hologram',
+  cost: 20,
+  image: {
+    fileLink: 'https://bespoke-nails.s3-ap-southeast-2.amazonaws.com/noImage.png',
+    description: 'sunny'
+  }
+}
+    ✓ should have nail_shape be squoval
+
+  Add a product
+{
+  name: 'Test User',
+  address: '123 Made-up St, London, E1 6AN',
+  email: 'test@bespokeTest.co.uk',
+  phone_number: '07911123456',
+  nail_length: 20,
+  nail_shape: 'round',
+  nail_style: 'hologram',
+  cost: 20,
+  image: {
+    fileLink: 'https://bespoke-nails.s3-ap-southeast-2.amazonaws.com/noImage.png',
+    description: 'sunny'
+  }
+}
+    ✓ should add a product
+
+  Get product by id
+{
+  name: 'Test User',
+  address: '123 Made-up St, London, E1 6AN',
+  email: 'test@bespokeTest.co.uk',
+  phone_number: '07911123456',
+  nail_length: 20,
+  nail_shape: 'round',
+  nail_style: 'hologram',
+  cost: 20,
+  image: {
+    fileLink: 'https://bespoke-nails.s3-ap-southeast-2.amazonaws.com/noImage.png',
+    description: 'sunny'
+  }
+}
+    ✓ It should get a product with nail style of planets
+
+  Delete product
+{
+  name: 'Test User',
+  address: '123 Made-up St, London, E1 6AN',
+  email: 'test@bespokeTest.co.uk',
+  phone_number: '07911123456',
+  nail_length: 20,
+  nail_shape: 'round',
+  nail_style: 'hologram',
+  cost: 20,
+  image: {
+    fileLink: 'https://bespoke-nails.s3-ap-southeast-2.amazonaws.com/noImage.png',
+    description: 'sunny'
+  }
+}
+    ✓ Should delete the specified product
+
+  updateProduct
+{
+  name: 'Test User',
+  address: '123 Made-up St, London, E1 6AN',
+  email: 'test@bespokeTest.co.uk',
+  phone_number: '07911123456',
+  nail_length: 20,
+  nail_shape: 'round',
+  nail_style: 'hologram',
+  cost: 20,
+  image: {
+    fileLink: 'https://bespoke-nails.s3-ap-southeast-2.amazonaws.com/noImage.png',
+    description: 'sunny'
+  }
+}
+    ✓ Should update a product
+
+  get all queries
+{
+  name: 'Test User',
+  address: '123 Made-up St, London, E1 6AN',
+  email: 'test@bespokeTest.co.uk',
+  phone_number: '07911123456',
+  nail_length: 20,
+  nail_shape: 'round',
+  nail_style: 'hologram',
+  cost: 20,
+  image: {
+    fileLink: 'https://bespoke-nails.s3-ap-southeast-2.amazonaws.com/noImage.png',
+    description: 'sunny'
+  }
+}
+    ✓ should get query with correct email address
+
+  create a query
+{
+  name: 'Test User',
+  address: '123 Made-up St, London, E1 6AN',
+  email: 'test@bespokeTest.co.uk',
+  phone_number: '07911123456',
+  nail_length: 20,
+  nail_shape: 'round',
+  nail_style: 'hologram',
+  cost: 20,
+  image: {
+    fileLink: 'https://bespoke-nails.s3-ap-southeast-2.amazonaws.com/noImage.png',
+    description: 'sunny'
+  }
+}
+    ✓ should return a new query with Test User as name
+
+  Get query by id
+{
+  name: 'Test User',
+  address: '123 Made-up St, London, E1 6AN',
+  email: 'test@bespokeTest.co.uk',
+  phone_number: '07911123456',
+  nail_length: 20,
+  nail_shape: 'round',
+  nail_style: 'hologram',
+  cost: 20,
+  image: {
+    fileLink: 'https://bespoke-nails.s3-ap-southeast-2.amazonaws.com/noImage.png',
+    description: 'sunny'
+  }
+}
+    ✓ It should get a query with the username 'Test User'
+
+  Delete query
+{
+  name: 'Test User',
+  address: '123 Made-up St, London, E1 6AN',
+  email: 'test@bespokeTest.co.uk',
+  phone_number: '07911123456',
+  nail_length: 20,
+  nail_shape: 'round',
+  nail_style: 'hologram',
+  cost: 20,
+  image: {
+    fileLink: 'https://bespoke-nails.s3-ap-southeast-2.amazonaws.com/noImage.png',
+    description: 'sunny'
+  }
+}
+    ✓ Should delete the specified query
+
+
+  14 passing (590ms)
+

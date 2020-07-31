@@ -9,9 +9,7 @@ const queryRouter = require("./routes/queries_routes")
 const passport = require('passport')
 const session = require('express-session');
 const MongoStore = require("connect-mongo")(session)
-const multer  = require('multer')
 const fileUploadRoutes = require('./routes/fileUploadRoutes')
-const upload = multer({ dest: 'uploads/' })
 
 
 // Sets port if deploying to external provider 
@@ -38,9 +36,12 @@ app.use(bodyParser.json());
 if(process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
 }
-    
-const dbConn = process.env.MONGODB_URI || 'mongodb://localhost/bespoke_nails'  
 
+//use deployed database
+const dbConn = process.env.MONGODB_URI || 'mongodb://localhost/bespoke_nails' 
+// use on above line if need to do local testing: || 'mongodb://localhost/bespoke_nails'  
+
+//mongoose connects to deployed database and display error
 mongoose.connect(
     dbConn, 
     {
@@ -59,7 +60,7 @@ mongoose.connect(
 
 //session must be before passport
 app.use(session({
-  // resave and saveUninitialized set to false for deprecation warnings
+  // re-save and saveUninitialized set to false for deprecation warnings
   secret: "Donutsfordays",
   resave: false,
   saveUninitialized: false,
@@ -76,11 +77,12 @@ require("./config/passport")
 app.use(passport.initialize())
 app.use(passport.session())
 
-  
+//routes
 app.use("/products", productRouter) 
 app.use("/admin", authRouter)
 app.use("/orders", orderRouter)
 app.use("/query", queryRouter)
+//image upload
 app.use("/uploads", fileUploadRoutes)
 
 // Define a simple route for GET
