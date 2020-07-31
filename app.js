@@ -18,10 +18,10 @@ const upload = multer({ dest: 'uploads/' })
 // or port assigned already
 const port = process.env.PORT || 3001;
 
-// Equivalant of create server in http library
+// Equivalent of create server in http library
 const app = express();
 
-const whitelist = ['http://localhost:3000','https://reverent-rosalind-d6a50f.netlify.app/']
+const whitelist = ['http://localhost:3000','https://bespoke-nails.netlify.app/']
 app.use(cors({
     credentials: true,
     origin: function (origin,callback) {
@@ -64,7 +64,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   cookie: {
-      maxAge: 1800000
+      maxAge: 180000000
   },
   store: new MongoStore({
       mongooseConnection: mongoose.connection
@@ -85,14 +85,9 @@ app.use("/uploads", fileUploadRoutes)
 
 // Define a simple route for GET
 app.get("/",(req,res) => {
-    res.send("Hi from your Express Server. From past you. You are awesome.")
+    res.send("You are connected to the bespoke nails server")
 });
 
-// upload images
-// app.post('/uploads', upload.single('file'), function (req, res, next) {
-//   // req.file is the `avatar` file
-//   // req.body will hold the text fields, if there were any
-// })
 
 // Listen
 app.listen(port, () => console.log(`Listening on port ${port}.`));
